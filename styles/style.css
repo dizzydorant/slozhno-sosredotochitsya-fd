@@ -19,10 +19,10 @@
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   align-items: center;
+  margin-block-end: 40px;
   padding: var(--decor-padding);
   block-size: 100vh;
   min-block-size: 668px;
-  margin-block-end: 40px;
 }
 
 .header__theme-menu {
@@ -36,14 +36,14 @@
 }
 
 .header__theme-menu-button {
-  background-color: transparent;
-  border: none;
-  padding-inline: 13px;
   width: 70px;
   height: 26px;
+  border: none;
+  padding-inline: 13px;
   color: var(--button-color);
   font-weight: var(--normal-fw);
   font-size: var(--font-size);
+  background-color: transparent;
 }
 
 .header__theme-menu-button:hover {
@@ -55,8 +55,8 @@
 }
 
 .header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--focus-color);
   outline: none;
-  border-bottom: 1px solid var(--focus-color)
 }
 
 .header__title {
@@ -70,9 +70,9 @@
 .header__description {
   justify-self: end;
   align-self: start;
-  margin-block-start: 55px;
   max-width: 355px;
   min-height: 71px;
+  margin-block-start: 55px;
 }
 
 .title-decor {
@@ -131,16 +131,16 @@
 }
 
 .text-section {
-  padding-inline: var(--decor-padding);
-  padding-block-end: 59px;
   display: grid;
   gap: 20px;
+  padding-inline: var(--decor-padding);
+  padding-block-end: 59px;
 }
 
 .text-section__title {
-  font-size: var(--font-size);
-  font-weight: var(--bold-fw);
   color: var(--text-title-color);
+  font-weight: var(--bold-fw);
+  font-size: var(--font-size);
 }
 
 .text-section__texts {
@@ -149,21 +149,21 @@
   gap: 20px;
 }
 
-.text-section__texts-item{
+.text-section__texts-item {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
 .text-section__texts-paragraph {
-  font-weight: var(--normal-fw);
   color: var(--paragraph-color);
+  font-weight: var(--normal-fw);
   font-size: var(--font-size);
 }
 
 .text-section__texts-paragraph-link {
   text-decoration: none;
-  text-shadow: 2px 0px #FF0070;
+  text-shadow: 2px 0px var(--accent-color);
   cursor: pointer;
 }
 
@@ -176,8 +176,7 @@
 }
 
 .text-section__texts-paragraph-link:focus-visible {
-  outline: none;
-  outline: 1px solid var(--paragraph-color)
+  outline: 1px solid var(--paragraph-color);
 }
 
 .text-section__texts-titles {
@@ -185,11 +184,11 @@
 }
 
 .gallery-section {
-  padding-inline: var(--decor-padding) ;
   display: flex;
   flex-direction: column;
-  gap:10px;
+  gap: 10px;
   margin-block-end: 40px;
+  padding-inline: var(--decor-padding);
 }
 
 .gallery-section__images {
@@ -198,23 +197,24 @@
 }
 
 .gallery-section__image {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  object-position: center;
 }
 
 .footer {
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  padding-inline: var(--decor-padding);
   block-size: 100vh;
   min-block-size: 668px;
-  padding-inline: var(--decor-padding);
 }
 
-.footer__title{
+.footer__title {
   color: var(--header-title-color);
   font-weight: var(--bold-fw);
   font-size: var(--h1-size);
@@ -234,23 +234,10 @@
   pointer-events: none;
 }
 
-.decorated-footer-zone::after {
-  content: "";
-  position: absolute;
-  bottom: var(--decor-padding);
-  left: var(--decor-padding);
-  width: 25px;
-  height: 25px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
-  pointer-events: none;
-}
-
 .header__theme-menu-button_active {
+  border: 1px solid var(--button-color);
   pointer-events: none;
-  border: 1px solid var(--button-color)
 }
-
 
 @media (width >= 768px) {
   .header {
@@ -263,12 +250,12 @@
 
   .header__decor-element {
     top: 20px;
-    right: 48px
+    right: 48px;
   }
 
   .header__description {
     max-width: 368px;
-    margin-block-start: 161px
+    margin-block-start: 161px;
   }
 
   .text-section_type_primary {
@@ -289,25 +276,24 @@
   }
 
   .gallery-section__images {
-    gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
   }
 
-  .sunset__image{
+  .sunset__image {
     grid-column: span 2;
   }
 
-  .ice-cream__image{
+  .ice-cream__image {
     grid-row: span 2;
   }
-  .tape__image{
+  .tape__image {
     grid-row: span 2;
   }
 
-  .street__image{
+  .street__image {
     grid-column: span 2;
   }
-  
 }
 
 @media (width >= 1024px) {
@@ -328,12 +314,12 @@
   }
 
   .header__description {
-  margin-block-start: 114px;
-  max-width: 491px;
-}
+    max-width: 491px;
+    margin-block-start: 114px;
+  }
 
   .text-section_type_primary {
-    grid-template-columns: 315px 1fr
+    grid-template-columns: 1fr 2fr;
   }
 
   .text-section__title {
@@ -346,10 +332,6 @@
   }
 
   .text-section {
-    margin-block-end: 25px
+    margin-block-end: 25px;
   }
 }
- 
-
-
-
