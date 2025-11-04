@@ -18,6 +18,12 @@
   --bold-fw: 700;
   --normal-fw: 400;
   --paragraph-color:rgba(241, 178, 206, 1);
+  --title-margin: -20px;
+  --button-color: #FF0070;
+  --hover-color: rgba(255, 0, 112, 0.4);
+  --focus-color: #FF0070;
+  --text-title-color: #FF0070;
+  --decor-color: #FF0070;
 }
 
 @media (width >= 768px) {
