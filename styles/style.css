@@ -301,10 +301,6 @@
     align-items: start;
   }
 
-  .header__title {
-    margin-inline-start: var(--title-margin);
-  }
-
   .header__theme-menu {
     justify-self: center;
   }
